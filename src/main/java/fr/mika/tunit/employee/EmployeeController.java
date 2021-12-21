@@ -18,7 +18,7 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public List<EmployeeDTO> findAl() {
+    public List<EmployeeDTO> findAll() {
         return this.service.findAll();
     }
 
