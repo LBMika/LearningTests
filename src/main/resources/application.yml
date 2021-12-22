@@ -1,0 +1,23 @@
+#Server conf
+server:
+  port: 9000
+
+#Spring conf
+spring:
+  # App conf
+  application:
+    name: api
+  # MySql conf
+  datasource:
+    url: jdbc:mysql://localhost:3306/papanoel
+    username: root
+    password: root
+  #JPA conf
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+
+
+
