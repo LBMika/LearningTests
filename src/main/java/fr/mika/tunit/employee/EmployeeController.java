@@ -1,6 +1,7 @@
 package fr.mika.tunit.employee;
 
 import fr.mika.tunit.employee.dto.EmployeeDTO;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,12 +36,12 @@ public class EmployeeController {
 
     @PostMapping
     public ResponseEntity<EmployeeDTO> save(@RequestBody EmployeeDTO toSave) {
-        return ResponseEntity.ok(this.service.save(toSave));
+        return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(toSave));
     }
 
     @PutMapping
     public ResponseEntity<EmployeeDTO> update(@RequestBody EmployeeDTO toUpdate) {
-        return ResponseEntity.ok(this.service.save(toUpdate));
+        return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(toUpdate));
     }
 
     @DeleteMapping
